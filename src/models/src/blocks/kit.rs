@@ -33,7 +33,6 @@ pub enum SlackBlock {
 }
 
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize)]
-#[serde(tag = "type")]
 pub struct SlackAttachment {
     pub color: String,
     pub blocks: Option<Vec<SlackBlock>>
