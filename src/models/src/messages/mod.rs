@@ -23,6 +23,7 @@ pub struct SlackMessageOrigin {
 pub struct SlackMessageContent {
     pub text: Option<String>,
     pub blocks: Option<Vec<SlackBlock>>,
+    pub attachments: Option<Vec<SlackAttachment>>
 }
 
 #[skip_serializing_none]
