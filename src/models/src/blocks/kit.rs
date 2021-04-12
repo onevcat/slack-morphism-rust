@@ -32,6 +32,13 @@ pub enum SlackBlock {
     RichText(serde_json::Value),
 }
 
+#[derive(Debug, PartialEq, Clone, Serialize, Deserialize)]
+#[serde(tag = "type")]
+pub struct SlackAttachment {
+    pub color: String,
+    pub blocks: Option<Vec<SlackBlock>>
+}
+
 #[skip_serializing_none]
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize, Builder)]
 pub struct SlackSectionBlock {
