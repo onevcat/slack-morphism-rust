@@ -261,7 +261,7 @@ impl From<SlackBlockImageElement> for SlackContextBlockElement {
 #[skip_serializing_none]
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize, Builder)]
 pub struct SlackBlockButtonElement {
-    pub action_id: SlackActionId,
+    pub action_id: Option<SlackActionId>,
     pub text: SlackBlockPlainTextOnly,
     pub url: Option<String>,
     pub value: Option<String>,
